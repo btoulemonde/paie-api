@@ -1,5 +1,5 @@
 function listerBulletins() {
-	fetch('bulletin').then(function(resp) {
+	fetch('bulletins').then(function(resp) {
 		return resp.json();
 	}).then(
 			function(listeBulletins) {
@@ -15,4 +15,21 @@ function listerBulletins() {
 				document.querySelector('tbody').innerHTML = bulletins;
 			})
 
+}
+
+function listerPeriodes(){
+	fetch('periodes')
+	.then(function(resp) {
+		return resp.json();
+	})
+	.then(
+			function(listePeriodes) {
+				var periodes = listePeriodes.map(
+						function(periode) {
+							return '<option>' + periode.dateDebut + " - "
+									+ periode.dateFin + '</option>';
+						}).join('');
+				document.getElementById('periode').innerHTML = ' <label for="periode">periode</label><select class="form-control" name="periode" id="periode">'
+						+ periodes + '</select>';
+			})
 }

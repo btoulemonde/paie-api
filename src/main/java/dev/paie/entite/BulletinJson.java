@@ -7,7 +7,6 @@ public class BulletinJson {
 	private BigDecimal primeExceptionelle;
 	private int periodeId;
 	private int remunerationEmployeId;
-	private BigDecimal salaireBrut;
 
 	/**
 	 * Getter
@@ -45,25 +44,6 @@ public class BulletinJson {
 	 */
 	public void setPeriodeId(int periodeId) {
 		this.periodeId = periodeId;
-	}
-
-	/**
-	 * Getter
-	 * 
-	 * @return the salaireBrut
-	 */
-	public BigDecimal getSalaireBrut() {
-		return salaireBrut;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param salaireBrut
-	 *            the salaireBrut to set
-	 */
-	public void setSalaireBrut(BigDecimal salaireBrut) {
-		this.salaireBrut = salaireBrut;
 	}
 
 	/**
